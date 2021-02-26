@@ -1,821 +1,848 @@
 <!doctype html>
 <html lang="pt-br">
 
-  <head>
-    <!-- Meta tags Obrigatórias -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Informações sobre o site -->
-    <meta name="description" content="Digital Innovation One - Bootcamp Global Fullstack Developer: Aula JavaScrip e ES6">
-    <meta name="author" content="Angelita Santos">
-    <link rel="icon" href="img/logo.png">
-    <title>JavaScript, ES6</title>
+  <meta name="description" content="Digital Innovation One - Bootcamp Global Fullstack Developer: Aula JavaScrip e ES6">
+  <meta name="author" content="Angelita Santos">
+  <link rel="icon" href="img/logo.png">
+  <title>JavaScript, ES6</title>
 
-    <!-- Principal CSS do Bootstrap -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    
-    <!-- Estilos customizados para esse template -->
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Lato:400,300,700'>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Lato:400,300,700'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
-  </head>
+</head>
 
-  <body onload="relogio();">
-      
-    <!-- Jumbotron -->
+<body onload="relogio();">
 
-    <div class="jumbotron">
+  <!-- Jumbotron -->
 
-      <div class="container">
-
-        <div class="row">
-          <div class="col-12 text-center">
-
-            <h1 class="display-4 text-success">Ruas que andei</h1>
-            <p class="lead">
-              <i class="fa fa-users text-success" aria-hidden="true"></i>
-              <i class="fa fa-car text-success" aria-hidden="true"></i>
-              <i class="fa fa-bus text-success" aria-hidden="true"></i>
-              <i class="fa fa-plane text-success" aria-hidden="true"></i>
-              Ando devagar porque já tive pressa.
-              <i class="fa fa-plane text-success" aria-hidden="true"></i>
-              <i class="fa fa-bus text-success" aria-hidden="true"></i>
-              <i class="fa fa-car text-success" aria-hidden="true"></i>
-              <i class="fa fa-users text-success" aria-hidden="true"></i>
-            </p>
-          <hr>
-
-          </div>
-        </div>
-
-        <div class="row">
-            <div class="col-12">
-
-              <ul class="nav nav-pills bg-success justify-content-center mb-4" id="pills-nav" role="tablist">
-
-                <li class="nav-item">
-                  <a class="nav-link btn-success" id="nav-pills-02" data-toggle="pill" href="#nav-item-01">
-                    <img class="rounded-circle" src="img/bandeiras/brasil.png" title="Brasil" width="40" height="40"></a>   
-                </li>
-
-                <li class="nav-item">
-                  <a class="nav-link btn-success" id="nav-pills-02" data-toggle="pill" href="#nav-item-02">
-                    <img class="rounded-circle" src="img/bandeiras/alemanha.png" title="Alemanha" width="40" height="40"></a>   
-                </li>
-
-                <li class="nav-item">
-                  <a class="nav-link btn-success" id="nav-pills-02" data-toggle="pill" href="#nav-item-03">
-                    <img class="rounded-circle" src="img/bandeiras/argentina.png" title="Argentina" width="40" height="40"></a>   
-                </li>
-
-                <li class="nav-item">
-                  <a class="nav-link btn-success" id="nav-pills-02" data-toggle="pill" href="#nav-item-04">
-                    <img class="rounded-circle" src="img/bandeiras/belgica.png" title="Bélgica" width="40" height="40"></a>   
-                </li>
-
-                <li class="nav-item">
-                  <a class="nav-link btn-success" id="nav-pills-02" data-toggle="pill" href="#nav-item-05">
-                    <img class="rounded-circle" src="img/bandeiras/canada.png" title="Canadá" width="40" height="40"></a>   
-                </li>
-
-                <li class="nav-item">
-                  <a class="nav-link btn-success" id="nav-pills-02" data-toggle="pill" href="#nav-item-06">
-                    <img class="rounded-circle" src="img/bandeiras/chile.png" title="Chile" width="40" height="40"></a>   
-                </li>
-
-                <li class="nav-item">
-                  <a class="nav-link btn-success" id="nav-pills-02" data-toggle="pill" href="#nav-item-07">
-                    <img class="rounded-circle" src="img/bandeiras/eua.png" title="Estados Unidos" width="40" height="40"></a>   
-                </li>
-
-                <li class="nav-item">
-                  <a class="nav-link btn-success" id="nav-pills-02" data-toggle="pill" href="#nav-item-08">
-                    <img class="rounded-circle" src="img/bandeiras/franca.png" title="França" width="40" height="40"></a>   
-                </li>
-
-                <li class="nav-item">
-                  <a class="nav-link btn-success" id="nav-pills-02" data-toggle="pill" href="#nav-item-09">
-                    <img class="rounded-circle" src="img/bandeiras/holanda.png" title="Holanda" width="40" height="40"></a>   
-                </li>
-
-                <li class="nav-item">
-                  <a class="nav-link btn-success" id="nav-pills-02" data-toggle="pill" href="#nav-item-10">
-                    <img class="rounded-circle" src="img/bandeiras/italia.png" title="Itália" width="40" height="40"></a>   
-                </li>
-
-                <li class="nav-item">
-                  <a class="nav-link btn-success" id="nav-pills-02" data-toggle="pill" href="#nav-item-11">
-                    <img class="rounded-circle" src="img/bandeiras/luxemburgo.png" title="Luxemburgo" width="40" height="40"></a>   
-                </li>
-
-                <li class="nav-item">
-                  <a class="nav-link btn-success" id="nav-pills-02" data-toggle="pill" href="#nav-item-12">
-                    <img class="rounded-circle" src="img/bandeiras/paraguai.png" title="Paraguai" width="40" height="40"></a>   
-                </li>
-
-                <li class="nav-item">
-                  <a class="nav-link btn-success" id="nav-pills-02" data-toggle="pill" href="#nav-item-13">
-                    <img class="rounded-circle" src="img/bandeiras/vaticano.png" title="Vaticano" width="40" height="40"></a>   
-                </li>
-
-              </ul>
-
-              <div class="tab-content" id="nav-pills-content">
-
-                <div class="tab-pane fade show active" id="nav-item-01" role="tabpanel">
-                  <div>
-                        <img class="rounded mx-auto d-block" src="img/fotos/brasil.jpg" title="Brasília"  width="324" height="243"></a>   
-                  </div>
-                </div>
-
-                <div class="tab-pane fade show" id="nav-item-02" role="tabpanel">
-                  <div>
-                        <img class="rounded mx-auto d-block" src="img/fotos/alemanha.jpg" title="Munique"  width="324" height="243"></a>   
-                  </div>
-                </div>
-
-                <div class="tab-pane fade show" id="nav-item-03" role="tabpanel">
-                  <div>
-                        <img class="rounded mx-auto d-block" src="img/fotos/argentina.png" title="Buenos Aires"  width="324" height="243"></a>   
-                  </div>
-                </div>
-
-                <div class="tab-pane fade show" id="nav-item-04" role="tabpanel">
-                  <div>
-                        <img class="rounded mx-auto d-block" src="img/fotos/belgica.jpg" title="Bruxelas"  width="324" height="243"></a>   
-                  </div>
-                </div>
-
-                <div class="tab-pane fade show" id="nav-item-05" role="tabpanel">
-                  <div>
-                        <img class="rounded mx-auto d-block" src="img/fotos/canada.jpg" title="Toronto"  width="324" height="243"></a>   
-                  </div>
-                </div>
-
-                <div class="tab-pane fade show" id="nav-item-06" role="tabpanel">
-                  <div>
-                        <img class="rounded mx-auto d-block" src="img/fotos/chile.jpg" title="Santiago"  width="324" height="243"></a>   
-                  </div>
-                </div>
-
-                <div class="tab-pane fade show" id="nav-item-07" role="tabpanel">
-                  <div>
-                        <img class="rounded mx-auto d-block" src="img/fotos/estadosunidos.jpg" title="New York"  width="324" height="243"></a>   
-                  </div>
-                </div>
-
-                <div class="tab-pane fade show" id="nav-item-08" role="tabpanel">
-                  <div>
-                        <img class="rounded mx-auto d-block" src="img/fotos/franca.jpg" title="Paris"  width="324" height="243"></a>   
-                  </div>
-                </div>
-
-                <div class="tab-pane fade show" id="nav-item-09" role="tabpanel">
-                  <div>
-                        <img class="rounded mx-auto d-block" src="img/fotos/holanda.jpg" title="Roterdan"  width="324" height="243"></a>   
-                  </div>
-                </div>
-
-                <div class="tab-pane fade show" id="nav-item-10" role="tabpanel">
-                  <div>
-                        <img class="rounded mx-auto d-block" src="img/fotos/italia.jpg" title="Pisa"  width="324" height="243"></a>   
-                  </div>
-                </div>
-
-                <div class="tab-pane fade show" id="nav-item-11" role="tabpanel">
-                  <div>
-                        <img class="rounded mx-auto d-block" src="img/fotos/luxemburgo.jpg" title="Luxemburgo City"  width="324" height="243"></a>   
-                  </div>
-                </div>
-
-                <div class="tab-pane fade show" id="nav-item-12" role="tabpanel">
-                  <div>
-                        <img class="rounded mx-auto d-block" src="img/fotos/paraguai.jpg" title="Ciudad Del Este"  width="324" height="243"></a>   
-                  </div>
-                </div>
-
-                <div class="tab-pane fade show" id="nav-item-13" role="tabpanel">
-                  <div>
-                        <img class="rounded mx-auto d-block" src="img/fotos/vaticano.jpg" title="Vaticano"  width="324" height="243"></a>   
-                  </div>
-                </div>
-
-              </div>
-            </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Scrollspy -->
+  <div class="jumbotron">
 
     <div class="container">
 
       <div class="row">
-        <div class="col-12 text-center my-5">
-          <h1>Um pouco sobre por onde andei</h1>
+        <div class="col-12 text-center">
+
+          <h1 class="display-4 text-success">Ruas que andei</h1>
+          <p class="lead">
+            <i class="fa fa-users text-success" aria-hidden="true"></i>
+            <i class="fa fa-car text-success" aria-hidden="true"></i>
+            <i class="fa fa-bus text-success" aria-hidden="true"></i>
+            <i class="fa fa-plane text-success" aria-hidden="true"></i>
+            Ando devagar porque já tive pressa.
+            <i class="fa fa-plane text-success" aria-hidden="true"></i>
+            <i class="fa fa-bus text-success" aria-hidden="true"></i>
+            <i class="fa fa-car text-success" aria-hidden="true"></i>
+            <i class="fa fa-users text-success" aria-hidden="true"></i>
+          </p>
+          <hr>
+
         </div>
       </div>
 
-      <div class="row mb-5">
+      <div class="row">
+        <div class="col-12">
 
-        <div class="col-sm-6 col-md-4">
+          <ul class="nav nav-pills bg-success justify-content-center mb-4" id="pills-nav" role="tablist">
 
-          <nav id="navbarVertical" class="navbar bg-light">
+            <li class="nav-item">
+              <a class="nav-link btn-success" id="nav-pills-02" data-toggle="pill" href="#nav-item-01">
+                <img class="rounded-circle" src="img/bandeiras/brasil.png" title="Brasil" width="40" height="40"></a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link btn-success" id="nav-pills-02" data-toggle="pill" href="#nav-item-02">
+                <img class="rounded-circle" src="img/bandeiras/alemanha.png" title="Alemanha" width="40"
+                  height="40"></a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link btn-success" id="nav-pills-02" data-toggle="pill" href="#nav-item-03">
+                <img class="rounded-circle" src="img/bandeiras/argentina.png" title="Argentina" width="40"
+                  height="40"></a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link btn-success" id="nav-pills-02" data-toggle="pill" href="#nav-item-04">
+                <img class="rounded-circle" src="img/bandeiras/belgica.png" title="Bélgica" width="40" height="40"></a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link btn-success" id="nav-pills-02" data-toggle="pill" href="#nav-item-05">
+                <img class="rounded-circle" src="img/bandeiras/canada.png" title="Canadá" width="40" height="40"></a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link btn-success" id="nav-pills-02" data-toggle="pill" href="#nav-item-06">
+                <img class="rounded-circle" src="img/bandeiras/chile.png" title="Chile" width="40" height="40"></a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link btn-success" id="nav-pills-02" data-toggle="pill" href="#nav-item-07">
+                <img class="rounded-circle" src="img/bandeiras/eua.png" title="Estados Unidos" width="40"
+                  height="40"></a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link btn-success" id="nav-pills-02" data-toggle="pill" href="#nav-item-08">
+                <img class="rounded-circle" src="img/bandeiras/franca.png" title="França" width="40" height="40"></a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link btn-success" id="nav-pills-02" data-toggle="pill" href="#nav-item-09">
+                <img class="rounded-circle" src="img/bandeiras/holanda.png" title="Holanda" width="40" height="40"></a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link btn-success" id="nav-pills-02" data-toggle="pill" href="#nav-item-10">
+                <img class="rounded-circle" src="img/bandeiras/italia.png" title="Itália" width="40" height="40"></a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link btn-success" id="nav-pills-02" data-toggle="pill" href="#nav-item-11">
+                <img class="rounded-circle" src="img/bandeiras/luxemburgo.png" title="Luxemburgo" width="40"
+                  height="40"></a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link btn-success" id="nav-pills-02" data-toggle="pill" href="#nav-item-12">
+                <img class="rounded-circle" src="img/bandeiras/paraguai.png" title="Paraguai" width="40"
+                  height="40"></a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link btn-success" id="nav-pills-02" data-toggle="pill" href="#nav-item-13">
+                <img class="rounded-circle" src="img/bandeiras/vaticano.png" title="Vaticano" width="40"
+                  height="40"></a>
+            </li>
+
+          </ul>
+
+          <div class="tab-content" id="nav-pills-content">
+
+            <div class="tab-pane fade show active" id="nav-item-01" role="tabpanel">
+              <div>
+                <img class="rounded mx-auto d-block" src="img/fotos/brasil.jpg" title="Brasília" width="324"
+                  height="243"></a>
+              </div>
+            </div>
+
+            <div class="tab-pane fade show" id="nav-item-02" role="tabpanel">
+              <div>
+                <img class="rounded mx-auto d-block" src="img/fotos/alemanha.jpg" title="Munique" width="324"
+                  height="243"></a>
+              </div>
+            </div>
+
+            <div class="tab-pane fade show" id="nav-item-03" role="tabpanel">
+              <div>
+                <img class="rounded mx-auto d-block" src="img/fotos/argentina.png" title="Buenos Aires" width="324"
+                  height="243"></a>
+              </div>
+            </div>
+
+            <div class="tab-pane fade show" id="nav-item-04" role="tabpanel">
+              <div>
+                <img class="rounded mx-auto d-block" src="img/fotos/belgica.jpg" title="Bruxelas" width="324"
+                  height="243"></a>
+              </div>
+            </div>
+
+            <div class="tab-pane fade show" id="nav-item-05" role="tabpanel">
+              <div>
+                <img class="rounded mx-auto d-block" src="img/fotos/canada.jpg" title="Toronto" width="324"
+                  height="243"></a>
+              </div>
+            </div>
+
+            <div class="tab-pane fade show" id="nav-item-06" role="tabpanel">
+              <div>
+                <img class="rounded mx-auto d-block" src="img/fotos/chile.jpg" title="Santiago" width="324"
+                  height="243"></a>
+              </div>
+            </div>
+
+            <div class="tab-pane fade show" id="nav-item-07" role="tabpanel">
+              <div>
+                <img class="rounded mx-auto d-block" src="img/fotos/estadosunidos.jpg" title="New York" width="324"
+                  height="243"></a>
+              </div>
+            </div>
+
+            <div class="tab-pane fade show" id="nav-item-08" role="tabpanel">
+              <div>
+                <img class="rounded mx-auto d-block" src="img/fotos/franca.jpg" title="Paris" width="324"
+                  height="243"></a>
+              </div>
+            </div>
+
+            <div class="tab-pane fade show" id="nav-item-09" role="tabpanel">
+              <div>
+                <img class="rounded mx-auto d-block" src="img/fotos/holanda.jpg" title="Roterdan" width="324"
+                  height="243"></a>
+              </div>
+            </div>
+
+            <div class="tab-pane fade show" id="nav-item-10" role="tabpanel">
+              <div>
+                <img class="rounded mx-auto d-block" src="img/fotos/italia.jpg" title="Pisa" width="324"
+                  height="243"></a>
+              </div>
+            </div>
+
+            <div class="tab-pane fade show" id="nav-item-11" role="tabpanel">
+              <div>
+                <img class="rounded mx-auto d-block" src="img/fotos/luxemburgo.jpg" title="Luxemburgo City" width="324"
+                  height="243"></a>
+              </div>
+            </div>
+
+            <div class="tab-pane fade show" id="nav-item-12" role="tabpanel">
+              <div>
+                <img class="rounded mx-auto d-block" src="img/fotos/paraguai.jpg" title="Ciudad Del Este" width="324"
+                  height="243"></a>
+              </div>
+            </div>
+
+            <div class="tab-pane fade show" id="nav-item-13" role="tabpanel">
+              <div>
+                <img class="rounded mx-auto d-block" src="img/fotos/vaticano.jpg" title="Vaticano" width="324"
+                  height="243"></a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scrollspy -->
+
+  <div class="container">
+
+    <div class="row">
+      <div class="col-12 text-center my-5">
+        <h1>Um pouco sobre por onde andei</h1>
+      </div>
+    </div>
+
+    <div class="row mb-5">
+
+      <div class="col-sm-6 col-md-4">
+
+        <nav id="navbarVertical" class="navbar bg-light">
+          <nav class="nav nav-pills flex-column">
+            <a class="nav-link text-success btn-light" href="#item-1">Brasil</a>
+            <a class="nav-link text-success btn-light" href="#item-2">América do Sul</a>
+            <a class="nav-link text-success btn-light" href="#item-3">América do Norte</a>
+            <a class="nav-link text-success btn-light" href="#item-4">Europa</a>
+
             <nav class="nav nav-pills flex-column">
-              <a class="nav-link text-success btn-light" href="#item-1">Brasil</a>
-              <a class="nav-link text-success btn-light" href="#item-2">América do Sul</a>
-              <a class="nav-link text-success btn-light" href="#item-3">América do Norte</a>
-              <a class="nav-link text-success btn-light" href="#item-4">Europa</a>
-              
-              <nav class="nav nav-pills flex-column">
-                <a class="nav-link text-success btn-light ml-3" href="#item-4-1">Benelux</a>
-                <a class="nav-link text-success btn-light ml-3" href="#item-4-2">Alemanha</a>
-                <a class="nav-link text-success btn-light ml-3" href="#item-4-3">França</a>
-                <a class="nav-link text-success btn-light ml-3" href="#item-4-4">Itália</a>
-                <a class="nav-link text-success btn-light ml-3" href="#item-4-5">Vaticano</a>
-              </nav>
-
+              <a class="nav-link text-success btn-light ml-3" href="#item-4-1">Benelux</a>
+              <a class="nav-link text-success btn-light ml-3" href="#item-4-2">Alemanha</a>
+              <a class="nav-link text-success btn-light ml-3" href="#item-4-3">França</a>
+              <a class="nav-link text-success btn-light ml-3" href="#item-4-4">Itália</a>
+              <a class="nav-link text-success btn-light ml-3" href="#item-4-5">Vaticano</a>
             </nav>
+
           </nav>
+        </nav>
 
-        </div>
+      </div>
 
-        <div class="col-sm-6 col-md-8">
+      <div class="col-sm-6 col-md-8">
 
-          <div class="scrollspySite bg-light" data-spy="scroll" data-target="#navbarVertical" data-offset="0">
+        <div class="scrollspySite bg-light" data-spy="scroll" data-target="#navbarVertical" data-offset="0">
 
-            <h4 id="item-1">Brasil</h4>
-            <p class="text-justify">O território que atualmente forma o Brasil foi encontrado pelos espanhóis em 26 de janeiro 
-              de 1500, durante uma expedição comandada por Vicente Yáñez Pinzón, e achado pelos portugueses 
-              no dia 22 de abril do mesmo ano, em expedição liderada por Pedro Álvares Cabral. A região, 
-              então habitada por indígenas ameríndios divididos entre milhares de grupos étnicos e 
-              linguísticos diferentes, cabia a Portugal pelo Tratado de Tordesilhas, e tornou-se uma 
-              colônia do Império Português. O vínculo colonial foi rompido, de fato, quando em 1808 a 
-              capital do reino foi transferida de Lisboa para a cidade do Rio de Janeiro, depois de tropas 
-              francesas comandadas por Napoleão Bonaparte invadirem o território português. Em 1815, o 
-              Brasil se torna parte de um reino unido com Portugal. Dom Pedro I, o primeiro imperador, 
-              proclamou a independência política do país em 1822. Inicialmente independente como um império, 
-              período no qual foi uma monarquia constitucional parlamentarista, o Brasil tornou-se uma 
-              república em 1889, em razão de um golpe militar chefiado pelo marechal Deodoro da Fonseca 
-              (o primeiro presidente), embora uma legislatura bicameral, agora chamada de Congresso Nacional, 
-              já existisse desde a ratificação da primeira Constituição, em 1824. Desde o início do período 
-              republicano, a governança democrática foi interrompida por longos períodos de regimes 
-              autoritários, até um governo civil e eleito democraticamente assumir o poder em 1985, com o 
-              fim da ditadura militar.</p>
+          <h4 id="item-1">Brasil</h4>
+          <p class="text-justify">O território que atualmente forma o Brasil foi encontrado pelos espanhóis em 26 de
+            janeiro
+            de 1500, durante uma expedição comandada por Vicente Yáñez Pinzón, e achado pelos portugueses
+            no dia 22 de abril do mesmo ano, em expedição liderada por Pedro Álvares Cabral. A região,
+            então habitada por indígenas ameríndios divididos entre milhares de grupos étnicos e
+            linguísticos diferentes, cabia a Portugal pelo Tratado de Tordesilhas, e tornou-se uma
+            colônia do Império Português. O vínculo colonial foi rompido, de fato, quando em 1808 a
+            capital do reino foi transferida de Lisboa para a cidade do Rio de Janeiro, depois de tropas
+            francesas comandadas por Napoleão Bonaparte invadirem o território português. Em 1815, o
+            Brasil se torna parte de um reino unido com Portugal. Dom Pedro I, o primeiro imperador,
+            proclamou a independência política do país em 1822. Inicialmente independente como um império,
+            período no qual foi uma monarquia constitucional parlamentarista, o Brasil tornou-se uma
+            república em 1889, em razão de um golpe militar chefiado pelo marechal Deodoro da Fonseca
+            (o primeiro presidente), embora uma legislatura bicameral, agora chamada de Congresso Nacional,
+            já existisse desde a ratificação da primeira Constituição, em 1824. Desde o início do período
+            republicano, a governança democrática foi interrompida por longos períodos de regimes
+            autoritários, até um governo civil e eleito democraticamente assumir o poder em 1985, com o
+            fim da ditadura militar.</p>
 
-            <p>Fonte: <i onclick="abrirBrasil()" onmouseover="cliqueAqui(this)" onmouseout="voltarClique(this)" 
+          <p>Fonte: <i onclick="abrirBrasil()" onmouseover="cliqueAqui(this)" onmouseout="voltarClique(this)"
               class="fa fa-wikipedia-w text-dark" aria-hidden="true"></i></a></p>
-            <a href="#" data-toggle="modal" data-target="#ModalBrasil"><p class="text-center" 
-              onmouseover="saibaMais(this)" onmouseout="voltarSaibaMais(this)" >Saiba mais</p></a>
+          <a href="#" data-toggle="modal" data-target="#ModalBrasil">
+            <p class="text-center" onmouseover="saibaMais(this)" onmouseout="voltarSaibaMais(this)">Saiba mais</p>
+          </a>
 
-            <hr>
+          <hr>
 
-            <h4 id="item-2">América do Sul</h4>
-            <p class="text-justify">No século XIX, o continente recebeu cerca de 15 milhões de imigrantes provenientes da Europa, 
-              e sofreu influências culturais e ideológicas tanto dos Estados Unidos quanto da Europa. </p>
+          <h4 id="item-2">América do Sul</h4>
+          <p class="text-justify">No século XIX, o continente recebeu cerca de 15 milhões de imigrantes provenientes da
+            Europa,
+            e sofreu influências culturais e ideológicas tanto dos Estados Unidos quanto da Europa. </p>
 
-            <p class="text-justify">A região possui vastos recursos naturais e graves problemas econômicos e sociais. A indústria 
-              está concentrada no beneficiamento de produtos agrícolas e na produção de bens de consumo, com 
-              destaque para a indústria automobilística. No Brasil e na Argentina encontra-se mais diversificada, 
-              abrangendo setores como extração, refino de petróleo e siderurgia. O Brasil é responsável por 
-              cerca de três quintos da produção industrial sul-americana. A mineração inclui a extração de 
-              petróleo (com destaque para a Venezuela), cobre, estanho, manganês, ferro e outros. A agricultura 
-              é intensiva nas áreas tropicais, onde há culturas voltadas para a exportação (café, cacau, 
-              banana, cana-de-açúcar, cereais). A pecuária é praticada em larga escala no sul e no centro.
-            </p>
-            
-            <p>Fonte: <i onclick="abrirAmericaSul()" onmouseover="cliqueAqui(this)" onmouseout="voltarClique(this)" 
+          <p class="text-justify">A região possui vastos recursos naturais e graves problemas econômicos e sociais. A
+            indústria
+            está concentrada no beneficiamento de produtos agrícolas e na produção de bens de consumo, com
+            destaque para a indústria automobilística. No Brasil e na Argentina encontra-se mais diversificada,
+            abrangendo setores como extração, refino de petróleo e siderurgia. O Brasil é responsável por
+            cerca de três quintos da produção industrial sul-americana. A mineração inclui a extração de
+            petróleo (com destaque para a Venezuela), cobre, estanho, manganês, ferro e outros. A agricultura
+            é intensiva nas áreas tropicais, onde há culturas voltadas para a exportação (café, cacau,
+            banana, cana-de-açúcar, cereais). A pecuária é praticada em larga escala no sul e no centro.
+          </p>
+
+          <p>Fonte: <i onclick="abrirAmericaSul()" onmouseover="cliqueAqui(this)" onmouseout="voltarClique(this)"
               class="fa fa-wikipedia-w text-dark" aria-hidden="true"></i></a></p>
-            <a href="#" data-toggle="modal" data-target="#ModalAmericaSul"><p class="text-center" 
-              onmouseover="saibaMais(this)" onmouseout="voltarSaibaMais(this)" >Saiba mais</p></a>
+          <a href="#" data-toggle="modal" data-target="#ModalAmericaSul">
+            <p class="text-center" onmouseover="saibaMais(this)" onmouseout="voltarSaibaMais(this)">Saiba mais</p>
+          </a>
 
-            <hr>
+          <hr>
 
-            <h4 id="item-3">América do Norte</h4>
-            <p class="text-justify">Depois que Cristóvão Colombo atingiu as ilhas Bahamas em 1492, diversos exploradores espanhóis, 
-              partindo da ilha de Hispaniola, iniciaram o devassamento das terras continentais correspondentes à 
-              América Central e do Norte. Em 1519, Hernán Cortés iniciou a conquista do México. Seis anos antes, 
-              porém, a Flórida havia sido contornada por Juan Ponce de León, e no mesmo ano em que Cortés 
-              assenhoreou-se do México, Alonso de Pineda circundava o golfo do México. Durante os anos de 1524 e 
-              1525, o português Estevão Gomes, a serviço da Espanha, realizou o percurso desde Grand Banks até a 
-              Flórida. Expedições posteriores alcançaram o interior do continente: Pánfilo de Narváez desembarcou 
-              na Flórida (1528), enquanto Álvar Núñez Cabeza de Vaca e o negro escravo atingiram o norte do México 
-              (1536) a partir da baía de Galveston. Expedições iniciadas por Hernando de Soto e Marcos de Niza (1539) 
-              e por Francisco Vásquez de Coronado (1540) seguiram rotas que se estenderam desde o Grand Canyon 
-              até rio Savanna, subiram o vale do Mississipi além do Ohio e alcançaram o rio Kansas. As primeiras 
-              expedições espanholas foram completadas em 1542-43, quando Juan Rodríguez Cabrillo e Bartolomé Ferrelo 
-              exploraram a costa do Pacífico.</p>
+          <h4 id="item-3">América do Norte</h4>
+          <p class="text-justify">Depois que Cristóvão Colombo atingiu as ilhas Bahamas em 1492, diversos exploradores
+            espanhóis,
+            partindo da ilha de Hispaniola, iniciaram o devassamento das terras continentais correspondentes à
+            América Central e do Norte. Em 1519, Hernán Cortés iniciou a conquista do México. Seis anos antes,
+            porém, a Flórida havia sido contornada por Juan Ponce de León, e no mesmo ano em que Cortés
+            assenhoreou-se do México, Alonso de Pineda circundava o golfo do México. Durante os anos de 1524 e
+            1525, o português Estevão Gomes, a serviço da Espanha, realizou o percurso desde Grand Banks até a
+            Flórida. Expedições posteriores alcançaram o interior do continente: Pánfilo de Narváez desembarcou
+            na Flórida (1528), enquanto Álvar Núñez Cabeza de Vaca e o negro escravo atingiram o norte do México
+            (1536) a partir da baía de Galveston. Expedições iniciadas por Hernando de Soto e Marcos de Niza (1539)
+            e por Francisco Vásquez de Coronado (1540) seguiram rotas que se estenderam desde o Grand Canyon
+            até rio Savanna, subiram o vale do Mississipi além do Ohio e alcançaram o rio Kansas. As primeiras
+            expedições espanholas foram completadas em 1542-43, quando Juan Rodríguez Cabrillo e Bartolomé Ferrelo
+            exploraram a costa do Pacífico.</p>
 
-            <p>Fonte: <i onclick="abrirAmericaNorte()" onmouseover="cliqueAqui(this)" onmouseout="voltarClique(this)" 
+          <p>Fonte: <i onclick="abrirAmericaNorte()" onmouseover="cliqueAqui(this)" onmouseout="voltarClique(this)"
               class="fa fa-wikipedia-w text-dark" aria-hidden="true"></i></a></p>
-              <a href="#" data-toggle="modal" data-target="#ModalAmericaNorte"><p class="text-center" 
-                onmouseover="saibaMais(this)" onmouseout="voltarSaibaMais(this)" >Saiba mais</p></a>
-  
-            <hr>
+          <a href="#" data-toggle="modal" data-target="#ModalAmericaNorte">
+            <p class="text-center" onmouseover="saibaMais(this)" onmouseout="voltarSaibaMais(this)">Saiba mais</p>
+          </a>
 
-            <h4 id="item-4">Europa</h4>
-            <p class="text-justify">A Europa é o segundo menor continente em superfície do mundo, cobrindo cerca de 
-              10 180 000 km² ou 2% da superfície da Terra e cerca de 6,8% da área acima do nível do mar. Dos cerca 
-              de 50 países da Europa, a Rússia é o maior tanto em área quanto em população (sendo que a Rússia se 
-              estende por dois continentes, a Europa e a Ásia) e o Vaticano é o menor.</p>
-            <p class="text-justify">A Europa, nomeadamente a Grécia Antiga, é considerada o berço da cultura ocidental. 
-              Tendo desempenhado um papel preponderante na cena mundial a partir do século XVI, especialmente após o 
-              início do colonialismo. Entre os séculos XVI e XX, as nações europeias controlaram em vários momentos as 
-              Américas, a maior parte da África, a Oceânia e grande parte da Ásia. Ambas as guerras mundiais foram em 
-              grande parte centradas na Europa, sendo considerado como o principal fator para um declínio do domínio 
-              da Europa Ocidental na política e economia mundial a partir de meados do século XX, com os Estados Unidos 
-              e a União Soviética ganhando maior protagonismo.</p>
-              
-            <p>Fonte: <i onclick="abrirEuropa()" onmouseover="cliqueAqui(this)" onmouseout="voltarClique(this)" 
+          <hr>
+
+          <h4 id="item-4">Europa</h4>
+          <p class="text-justify">A Europa é o segundo menor continente em superfície do mundo, cobrindo cerca de
+            10 180 000 km² ou 2% da superfície da Terra e cerca de 6,8% da área acima do nível do mar. Dos cerca
+            de 50 países da Europa, a Rússia é o maior tanto em área quanto em população (sendo que a Rússia se
+            estende por dois continentes, a Europa e a Ásia) e o Vaticano é o menor.</p>
+          <p class="text-justify">A Europa, nomeadamente a Grécia Antiga, é considerada o berço da cultura ocidental.
+            Tendo desempenhado um papel preponderante na cena mundial a partir do século XVI, especialmente após o
+            início do colonialismo. Entre os séculos XVI e XX, as nações europeias controlaram em vários momentos as
+            Américas, a maior parte da África, a Oceânia e grande parte da Ásia. Ambas as guerras mundiais foram em
+            grande parte centradas na Europa, sendo considerado como o principal fator para um declínio do domínio
+            da Europa Ocidental na política e economia mundial a partir de meados do século XX, com os Estados Unidos
+            e a União Soviética ganhando maior protagonismo.</p>
+
+          <p>Fonte: <i onclick="abrirEuropa()" onmouseover="cliqueAqui(this)" onmouseout="voltarClique(this)"
               class="fa fa-wikipedia-w text-dark" aria-hidden="true"></i></a></p>
 
-            <hr>
+          <hr>
 
-            <h5 id="item-4-1">Bélgica, Holanda e Luxemburgo</h5>
-            <p class="text-justify">Benelux é uma organização econômica da Europa, que gerou o que seria mais 
-              tarde a União Europeia.[1] Compreende a Bélgica, Países Baixos e Luxemburgo, sendo inicialmente 
-              uma área de livre comércio entre estes três países. O Tratado de criação do Benelux (Union 
-              Économique Benelux) - União Econômica Benelux, foi firmado logo depois da segunda guerra mundial 
-              em 1944, pela Bélgica, Países Baixos e Luxemburgo, e entrou em vigor em 1 de novembro de 1960. 
-              O nome Benelux foi utilizado pela primeira vez neste tratado; é formado pelas iniciais dos nomes 
-              dos três países: BElgique, NEderlands e LUXembourg. O Benelux tinha como objetivos estimular o 
-              comércio e eliminar as barreiras alfandegárias.</p>
-            <a href="https://pt.wikipedia.org/wiki/B%C3%A9lgica" target="_blank">Bélgica</a>, 
-            <a href="https://pt.wikipedia.org/wiki/Holanda" target="_blank">Holanda</a>, 
-            <a href="https://pt.wikipedia.org/wiki/Luxemburgo" target="_blank">Luxemburgo</a>
-            <p></p>
-            <p>Fonte: <a href="https://pt.wikipedia.org/wiki/Benelux" target="_blank"> 
+          <h5 id="item-4-1">Bélgica, Holanda e Luxemburgo</h5>
+          <p class="text-justify">Benelux é uma organização econômica da Europa, que gerou o que seria mais
+            tarde a União Europeia.[1] Compreende a Bélgica, Países Baixos e Luxemburgo, sendo inicialmente
+            uma área de livre comércio entre estes três países. O Tratado de criação do Benelux (Union
+            Économique Benelux) - União Econômica Benelux, foi firmado logo depois da segunda guerra mundial
+            em 1944, pela Bélgica, Países Baixos e Luxemburgo, e entrou em vigor em 1 de novembro de 1960.
+            O nome Benelux foi utilizado pela primeira vez neste tratado; é formado pelas iniciais dos nomes
+            dos três países: BElgique, NEderlands e LUXembourg. O Benelux tinha como objetivos estimular o
+            comércio e eliminar as barreiras alfandegárias.</p>
+          <a href="https://pt.wikipedia.org/wiki/B%C3%A9lgica" target="_blank">Bélgica</a>,
+          <a href="https://pt.wikipedia.org/wiki/Holanda" target="_blank">Holanda</a>,
+          <a href="https://pt.wikipedia.org/wiki/Luxemburgo" target="_blank">Luxemburgo</a>
+          <p></p>
+          <p>Fonte: <a href="https://pt.wikipedia.org/wiki/Benelux" target="_blank">
               <i class="fa fa-wikipedia-w text-dark" aria-hidden="true"></i></a></p>
-              <a href="#" data-toggle="modal" data-target="#ModalBenelux"><p class="text-center" 
-                onmouseover="saibaMais(this)" onmouseout="voltarSaibaMais(this)" >Saiba mais</p></a>
-            <hr>
+          <a href="#" data-toggle="modal" data-target="#ModalBenelux">
+            <p class="text-center" onmouseover="saibaMais(this)" onmouseout="voltarSaibaMais(this)">Saiba mais</p>
+          </a>
+          <hr>
 
-            <h5 id="item-4-2">Alemanha</h5>
-            <p class="text-justify">A região chamada Germânia, habitada por vários povos germânicos, foi 
-              conhecida e documentada pelos romanos antes do ano 100. A partir do século X, os territórios 
-              alemães formaram a parte central do Sacro Império Romano-Germânico, que durou até 1806. Durante 
-              o século XVI, o norte da Alemanha tornou-se o centro da Reforma Protestante. Como um moderno 
-              Estado-nação, o país foi unificado pela primeira vez em consequência da Guerra Franco-Prussiana 
-              em 1871. Em 1949, após a Segunda Guerra Mundial, a Alemanha foi dividida em dois estados, a 
-              Alemanha Ocidental, oficialmente "República Federal da Alemanha", e a "Alemanha Oriental", 
-              oficialmente República Democrática Alemã, ao longo das linhas de ocupação aliadas. A Alemanha 
-              foi reunificada em 1990. A Alemanha Ocidental foi um dos membros fundadores da Comunidade 
-              Europeia (CE), em 1957, que posteriormente se tornou na União Europeia, em 1993. O país é parte 
-              do espaço Schengen e passou a adotar a moeda europeia, o euro, desde quando foi instituído, 
-              em 1999.</p>
-            <p>Fonte: <a href="https://pt.wikipedia.org/wiki/Alemanha" target="_blank"> 
+          <h5 id="item-4-2">Alemanha</h5>
+          <p class="text-justify">A região chamada Germânia, habitada por vários povos germânicos, foi
+            conhecida e documentada pelos romanos antes do ano 100. A partir do século X, os territórios
+            alemães formaram a parte central do Sacro Império Romano-Germânico, que durou até 1806. Durante
+            o século XVI, o norte da Alemanha tornou-se o centro da Reforma Protestante. Como um moderno
+            Estado-nação, o país foi unificado pela primeira vez em consequência da Guerra Franco-Prussiana
+            em 1871. Em 1949, após a Segunda Guerra Mundial, a Alemanha foi dividida em dois estados, a
+            Alemanha Ocidental, oficialmente "República Federal da Alemanha", e a "Alemanha Oriental",
+            oficialmente República Democrática Alemã, ao longo das linhas de ocupação aliadas. A Alemanha
+            foi reunificada em 1990. A Alemanha Ocidental foi um dos membros fundadores da Comunidade
+            Europeia (CE), em 1957, que posteriormente se tornou na União Europeia, em 1993. O país é parte
+            do espaço Schengen e passou a adotar a moeda europeia, o euro, desde quando foi instituído,
+            em 1999.</p>
+          <p>Fonte: <a href="https://pt.wikipedia.org/wiki/Alemanha" target="_blank">
               <i class="fa fa-wikipedia-w text-dark" aria-hidden="true"></i></a></p>
-              <a href="#" data-toggle="modal" data-target="#ModalAlemanha"><p class="text-center" 
-                onmouseover="saibaMais(this)" onmouseout="voltarSaibaMais(this)" >Saiba mais</p></a>
-            <hr>
+          <a href="#" data-toggle="modal" data-target="#ModalAlemanha">
+            <p class="text-center" onmouseover="saibaMais(this)" onmouseout="voltarSaibaMais(this)">Saiba mais</p>
+          </a>
+          <hr>
 
-            <h5 id="item-4-3">França</h5>
-            <p class="text-justify">Durante muito tempo a França exerceu um papel de liderança e hegemonia na 
-              Europa (principalmente a partir da segunda metade do século XVII e parte do XVIII). Ao longo daqueles 
-              dois séculos, a nação iniciou a colonização de várias áreas do planeta e, durante o século XIX e início 
-              do século XX, chegou a constituir o segundo maior império da história, o que incluía grande parte da 
-              América do Norte, África Central e Ocidental, Sudeste Asiático e muitas ilhas do Pacífico. É conhecida 
-              como a terra natal da primeira grande enciclopédia do mundo, a chamada Encyclopédie, formada por 35 
-              volumes e publicada entre 1751 e 1766, em pleno iluminismo do século XVIII.</p>
-            <p>Fonte: <a href="https://pt.wikipedia.org/wiki/Fran%C3%A7a" target="_blank"> 
+          <h5 id="item-4-3">França</h5>
+          <p class="text-justify">Durante muito tempo a França exerceu um papel de liderança e hegemonia na
+            Europa (principalmente a partir da segunda metade do século XVII e parte do XVIII). Ao longo daqueles
+            dois séculos, a nação iniciou a colonização de várias áreas do planeta e, durante o século XIX e início
+            do século XX, chegou a constituir o segundo maior império da história, o que incluía grande parte da
+            América do Norte, África Central e Ocidental, Sudeste Asiático e muitas ilhas do Pacífico. É conhecida
+            como a terra natal da primeira grande enciclopédia do mundo, a chamada Encyclopédie, formada por 35
+            volumes e publicada entre 1751 e 1766, em pleno iluminismo do século XVIII.</p>
+          <p>Fonte: <a href="https://pt.wikipedia.org/wiki/Fran%C3%A7a" target="_blank">
               <i class="fa fa-wikipedia-w text-dark" aria-hidden="true"></i></a></p>
-              <a href="#" data-toggle="modal" data-target="#ModalFranca"><p class="text-center" 
-                onmouseover="saibaMais(this)" onmouseout="voltarSaibaMais(this)" >Saiba mais</p></a>
-            <hr>
+          <a href="#" data-toggle="modal" data-target="#ModalFranca">
+            <p class="text-center" onmouseover="saibaMais(this)" onmouseout="voltarSaibaMais(this)">Saiba mais</p>
+          </a>
+          <hr>
 
-            <h5 id="item-4-4">Itália</h5>
-            <p class="text-justify">Durante grande parte de sua história pós-romana, a Itália foi fragmentada 
-              em vários reinos (tais como o Reino da Sardenha; o Reino das Duas Sicílias e o Ducado de Milão, 
-              etc.) e cidades-Estado, mas foi unificada em 1861, após um período tumultuado da história 
-              conhecido como "Il Risorgimento" ("O Ressurgimento"). Entre o final do século XIX e o fim da 
-              Segunda Guerra Mundial, a Itália possuiu um império colonial que estendia seu domínio até à 
-              Líbia, Eritreia, Somália, Etiópia, Albânia, Dodecaneso e uma concessão em Tianjin, na China. 
-              A Itália moderna é uma república democrática, classificada como o 24.º país mais desenvolvido 
-              do mundo e com índice de qualidade de vida entre os dez primeiros do planeta.</p>
-            <p>Fonte: <a href="https://pt.wikipedia.org/wiki/It%C3%A1lia" target="_blank"> 
+          <h5 id="item-4-4">Itália</h5>
+          <p class="text-justify">Durante grande parte de sua história pós-romana, a Itália foi fragmentada
+            em vários reinos (tais como o Reino da Sardenha; o Reino das Duas Sicílias e o Ducado de Milão,
+            etc.) e cidades-Estado, mas foi unificada em 1861, após um período tumultuado da história
+            conhecido como "Il Risorgimento" ("O Ressurgimento"). Entre o final do século XIX e o fim da
+            Segunda Guerra Mundial, a Itália possuiu um império colonial que estendia seu domínio até à
+            Líbia, Eritreia, Somália, Etiópia, Albânia, Dodecaneso e uma concessão em Tianjin, na China.
+            A Itália moderna é uma república democrática, classificada como o 24.º país mais desenvolvido
+            do mundo e com índice de qualidade de vida entre os dez primeiros do planeta.</p>
+          <p>Fonte: <a href="https://pt.wikipedia.org/wiki/It%C3%A1lia" target="_blank">
               <i class="fa fa-wikipedia-w text-dark" aria-hidden="true"></i></a></p>
-              <a href="#" data-toggle="modal" data-target="#ModalItalia"><p class="text-center" 
-                onmouseover="saibaMais(this)" onmouseout="voltarSaibaMais(this)" >Saiba mais</p></a>
-            <hr>
+          <a href="#" data-toggle="modal" data-target="#ModalItalia">
+            <p class="text-center" onmouseover="saibaMais(this)" onmouseout="voltarSaibaMais(this)">Saiba mais</p>
+          </a>
+          <hr>
 
-            <h5 id="item-4-5">Vaticano</h5>
-            <p class="text-justify">A Cidade do Vaticano é uma cidade-Estado que existe desde 1929. É 
-              distinta da Santa Sé, que remonta ao cristianismo primitivo sendo a principal sé episcopal de 
-              1,5 bilhão de católicos romanos (latinos e orientais) de todo o mundo. Ordenanças da Cidade do 
-              Vaticano são publicadas em italiano; documentos oficiais da Santa Sé são emitidos principalmente 
-              em latim.</p>
-            <p class="text-justify">A Cidade do Vaticano é um Estado eclesiástico ou teocrático-monárquico, 
-              governado pelo bispo de Roma, o Papa. A maior parte dos funcionários públicos são todos os 
-              clérigos católicos de diferentes origens raciais, étnicas e nacionais. É o território soberano 
-              da Santa Sé (Sancta Sedes) e o local de residência do Papa, referido como o Palácio Apostólico.</p>
-            <p>Fonte: <a href="https://pt.wikipedia.org/wiki/Vaticano" target="_blank"> 
+          <h5 id="item-4-5">Vaticano</h5>
+          <p class="text-justify">A Cidade do Vaticano é uma cidade-Estado que existe desde 1929. É
+            distinta da Santa Sé, que remonta ao cristianismo primitivo sendo a principal sé episcopal de
+            1,5 bilhão de católicos romanos (latinos e orientais) de todo o mundo. Ordenanças da Cidade do
+            Vaticano são publicadas em italiano; documentos oficiais da Santa Sé são emitidos principalmente
+            em latim.</p>
+          <p class="text-justify">A Cidade do Vaticano é um Estado eclesiástico ou teocrático-monárquico,
+            governado pelo bispo de Roma, o Papa. A maior parte dos funcionários públicos são todos os
+            clérigos católicos de diferentes origens raciais, étnicas e nacionais. É o território soberano
+            da Santa Sé (Sancta Sedes) e o local de residência do Papa, referido como o Palácio Apostólico.</p>
+          <p>Fonte: <a href="https://pt.wikipedia.org/wiki/Vaticano" target="_blank">
               <i class="fa fa-wikipedia-w text-dark" aria-hidden="true"></i></a></p>
-              <a href="#" data-toggle="modal" data-target="#ModalVaticano"><p class="text-center" 
-                onmouseover="saibaMais(this)" onmouseout="voltarSaibaMais(this)" >Saiba mais</p></a>
+          <a href="#" data-toggle="modal" data-target="#ModalVaticano">
+            <p class="text-center" onmouseover="saibaMais(this)" onmouseout="voltarSaibaMais(this)">Saiba mais</p>
+          </a>
 
-          </div>
-    
         </div>
 
       </div>
+
     </div>
+  </div>
 
-    <!-- Modal -->
+  <!-- Modal -->
 
-    <!-- Brasil -->
-    <div class="modal fade" id="ModalBrasil" tabindex="1" role="dialog">
-      <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
+  <!-- Brasil -->
+  <div class="modal fade" id="ModalBrasil" tabindex="1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
 
-          <div class="modal-header">
-            <h5 class="modal-title">Brasil</h5>
-            <button type="button" class="close" data-dismiss="modal">
-              <span>&times;</span>
-            </button>
-          </div>
+        <div class="modal-header">
+          <h5 class="modal-title">Brasil</h5>
+          <button type="button" class="close" data-dismiss="modal">
+            <span>&times;</span>
+          </button>
+        </div>
 
-          <div class="modal-body">
-            <div class="container-fluid">
-              <div class="text-center mb-1">
-                <a href="https://www.youtube.com/user/Expedia/videos" target="_blank">Conheça outros lugares</a>
-              </div>
-              <div class="row">
-                <div class="col-6">
-                  <h5>Rio de Janeiro</h5>
-                  <div class="embed-responsive embed-responsive-16by9">
+        <div class="modal-body">
+          <div class="container-fluid">
+            <div class="text-center mb-1">
+              <a href="https://www.youtube.com/user/Expedia/videos" target="_blank">Conheça outros lugares</a>
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <h5>Rio de Janeiro</h5>
+                <div class="embed-responsive embed-responsive-16by9">
 
-                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/ieWNzZPfZzk"></iframe>
+                  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/ieWNzZPfZzk"></iframe>
 
-                  </div>
-                </div>
-                <div class="col-6">
-                  <h5>Brasília</h5>
-                  <div class="embed-responsive embed-responsive-16by9">
-                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/oA53ZanVNgc"></iframe>
-                  </div>
                 </div>
               </div>
-              <div class="row my-3">
-                <div class="col-6">
-                  <h5>Foz do Iguaçu</h5>
-                  <div class="embed-responsive embed-responsive-16by9">
-                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/kY5G8s99Fl8"></iframe>
-                  </div>
+              <div class="col-6">
+                <h5>Brasília</h5>
+                <div class="embed-responsive embed-responsive-16by9">
+                  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/oA53ZanVNgc"></iframe>
                 </div>
-                <div class="col-6">
-                  <h5>Manaus</h5>
-                  <div class="embed-responsive embed-responsive-16by9">
-                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/hjf4f742_Nw"></iframe>
-                  </div>
+              </div>
+            </div>
+            <div class="row my-3">
+              <div class="col-6">
+                <h5>Foz do Iguaçu</h5>
+                <div class="embed-responsive embed-responsive-16by9">
+                  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/kY5G8s99Fl8"></iframe>
+                </div>
+              </div>
+              <div class="col-6">
+                <h5>Manaus</h5>
+                <div class="embed-responsive embed-responsive-16by9">
+                  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/hjf4f742_Nw"></iframe>
                 </div>
               </div>
             </div>
           </div>
-
-          <div class="modal-footer">
-            <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
-          </div>
-
         </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
+        </div>
+
       </div>
     </div>
+  </div>
 
-    <!-- América do Sul -->
-    <div class="modal fade" id="ModalAmericaSul" tabindex="1" role="dialog">
-      <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
+  <!-- América do Sul -->
+  <div class="modal fade" id="ModalAmericaSul" tabindex="1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
 
-          <div class="modal-header">
-            <h5 class="modal-title">América do Sul</h5>
-            <button type="button" class="close" data-dismiss="modal">
-              <span>&times;</span>
-            </button>
-          </div>
+        <div class="modal-header">
+          <h5 class="modal-title">América do Sul</h5>
+          <button type="button" class="close" data-dismiss="modal">
+            <span>&times;</span>
+          </button>
+        </div>
 
-          <div class="modal-body">
-            <div class="container-fluid">
-              <div class="text-center mb-1">
-                <a href="https://www.youtube.com/user/Expedia/videos" target="_blank">Conheça outros lugares</a>
-              </div>
-              <div class="row">
-                <div class="col-6">
-                  <h5>Buenos Aires</h5>
-                  <div class="embed-responsive embed-responsive-16by9">
-                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/K2ygb8NRiec"></iframe>
-                  </div>
+        <div class="modal-body">
+          <div class="container-fluid">
+            <div class="text-center mb-1">
+              <a href="https://www.youtube.com/user/Expedia/videos" target="_blank">Conheça outros lugares</a>
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <h5>Buenos Aires</h5>
+                <div class="embed-responsive embed-responsive-16by9">
+                  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/K2ygb8NRiec"></iframe>
                 </div>
-                <div class="col-6">
-                  <h5>Santiago</h5>
-                  <div class="embed-responsive embed-responsive-16by9">
-                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/fEsDgo05A6Q"></iframe>
-                  </div>
+              </div>
+              <div class="col-6">
+                <h5>Santiago</h5>
+                <div class="embed-responsive embed-responsive-16by9">
+                  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/fEsDgo05A6Q"></iframe>
                 </div>
               </div>
             </div>
           </div>
-
-          <div class="modal-footer">
-            <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
-          </div>
-
         </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
+        </div>
+
       </div>
     </div>
+  </div>
 
-    <!-- América do Norte -->
-    <div class="modal fade" id="ModalAmericaNorte" tabindex="1" role="dialog">
-      <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
+  <!-- América do Norte -->
+  <div class="modal fade" id="ModalAmericaNorte" tabindex="1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
 
-          <div class="modal-header">
-            <h5 class="modal-title">América do Norte</h5>
-            <button type="button" class="close" data-dismiss="modal">
-              <span>&times;</span>
-            </button>
-          </div>
+        <div class="modal-header">
+          <h5 class="modal-title">América do Norte</h5>
+          <button type="button" class="close" data-dismiss="modal">
+            <span>&times;</span>
+          </button>
+        </div>
 
-          <div class="modal-body">
-            <div class="container-fluid">
-              <div class="text-center mb-1">
-                <a href="https://www.youtube.com/user/Expedia/videos" target="_blank">Conheça outros lugares</a>
-              </div>
-              <div class="row">
-                <div class="col-6">
-                  <h5>Toronto</h5>
-                  <div class="embed-responsive embed-responsive-16by9">
-                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/foxzaooEMLc"></iframe>
-                  </div>
-                </div>
-                <div class="col-6">
-                  <h5>Quebec</h5>
-                  <div class="embed-responsive embed-responsive-16by9">
-                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/y0twX40VfRg"></iframe>
-                  </div>
+        <div class="modal-body">
+          <div class="container-fluid">
+            <div class="text-center mb-1">
+              <a href="https://www.youtube.com/user/Expedia/videos" target="_blank">Conheça outros lugares</a>
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <h5>Toronto</h5>
+                <div class="embed-responsive embed-responsive-16by9">
+                  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/foxzaooEMLc"></iframe>
                 </div>
               </div>
-              <div class="row my-3">
-                <div class="col-6">
-                  <h5>Florida</h5>
-                  <div class="embed-responsive embed-responsive-16by9">
-                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/O76VPhhgLTg"></iframe>
-                  </div>
+              <div class="col-6">
+                <h5>Quebec</h5>
+                <div class="embed-responsive embed-responsive-16by9">
+                  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/y0twX40VfRg"></iframe>
                 </div>
-                <div class="col-6">
-                  <h5>New York</h5>
-                  <div class="embed-responsive embed-responsive-16by9">
-                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/GrLz5q9NN70"></iframe>
-                  </div>
+              </div>
+            </div>
+            <div class="row my-3">
+              <div class="col-6">
+                <h5>Florida</h5>
+                <div class="embed-responsive embed-responsive-16by9">
+                  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/O76VPhhgLTg"></iframe>
+                </div>
+              </div>
+              <div class="col-6">
+                <h5>New York</h5>
+                <div class="embed-responsive embed-responsive-16by9">
+                  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/GrLz5q9NN70"></iframe>
                 </div>
               </div>
             </div>
           </div>
-
-          <div class="modal-footer">
-            <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
-          </div>
-
         </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
+        </div>
+
       </div>
     </div>
+  </div>
 
-    <!-- Benelux -->
-    <div class="modal fade" id="ModalBenelux" tabindex="1" role="dialog">
-      <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
+  <!-- Benelux -->
+  <div class="modal fade" id="ModalBenelux" tabindex="1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
 
-          <div class="modal-header">
-            <h5 class="modal-title">Benelux</h5>
-            <button type="button" class="close" data-dismiss="modal">
-              <span>&times;</span>
-            </button>
-          </div>
+        <div class="modal-header">
+          <h5 class="modal-title">Benelux</h5>
+          <button type="button" class="close" data-dismiss="modal">
+            <span>&times;</span>
+          </button>
+        </div>
 
-          <div class="modal-body">
-            <div class="container-fluid">
-              <div class="text-center mb-1">
-                <a href="https://www.youtube.com/user/Expedia/videos" target="_blank">Conheça outros lugares</a>
-              </div>
-              <div class="row">
-                <div class="col-6">
-                  <h5>Antuérpia</h5>
-                  <div class="embed-responsive embed-responsive-16by9">
-                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/PFABydv5TbM"></iframe>
-                  </div>
+        <div class="modal-body">
+          <div class="container-fluid">
+            <div class="text-center mb-1">
+              <a href="https://www.youtube.com/user/Expedia/videos" target="_blank">Conheça outros lugares</a>
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <h5>Antuérpia</h5>
+                <div class="embed-responsive embed-responsive-16by9">
+                  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/PFABydv5TbM"></iframe>
                 </div>
-                <div class="col-6">
-                  <h5>Roterdan</h5>
-                  <div class="embed-responsive embed-responsive-16by9">
-                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/tRwIRG4Lsdk"></iframe>
-                  </div>
+              </div>
+              <div class="col-6">
+                <h5>Roterdan</h5>
+                <div class="embed-responsive embed-responsive-16by9">
+                  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/tRwIRG4Lsdk"></iframe>
                 </div>
               </div>
             </div>
           </div>
-
-          <div class="modal-footer">
-            <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
-          </div>
-
         </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
+        </div>
+
       </div>
     </div>
+  </div>
 
-    <!-- Alemanha -->
-    <div class="modal fade" id="ModalAlemanha" tabindex="1" role="dialog">
-      <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
+  <!-- Alemanha -->
+  <div class="modal fade" id="ModalAlemanha" tabindex="1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
 
-          <div class="modal-header">
-            <h5 class="modal-title">Alemanha</h5>
-            <button type="button" class="close" data-dismiss="modal">
-              <span>&times;</span>
-            </button>
-          </div>
+        <div class="modal-header">
+          <h5 class="modal-title">Alemanha</h5>
+          <button type="button" class="close" data-dismiss="modal">
+            <span>&times;</span>
+          </button>
+        </div>
 
-          <div class="modal-body">
-            <div class="container-fluid">
-              <div class="text-center mb-1">
-                <a href="https://www.youtube.com/user/Expedia/videos" target="_blank">Conheça outros lugares</a>
-              </div>
-              <div class="row">
-                <div class="col-6">
-                  <h5>Frankfurt</h5>
-                  <div class="embed-responsive embed-responsive-16by9">
-                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/UQgcBiAztjs"></iframe>
-                  </div>
+        <div class="modal-body">
+          <div class="container-fluid">
+            <div class="text-center mb-1">
+              <a href="https://www.youtube.com/user/Expedia/videos" target="_blank">Conheça outros lugares</a>
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <h5>Frankfurt</h5>
+                <div class="embed-responsive embed-responsive-16by9">
+                  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/UQgcBiAztjs"></iframe>
                 </div>
-                <div class="col-6">
-                  <h5>Munique</h5>
-                  <div class="embed-responsive embed-responsive-16by9">
-                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/87Rztt8FeOU"></iframe>
-                  </div>
+              </div>
+              <div class="col-6">
+                <h5>Munique</h5>
+                <div class="embed-responsive embed-responsive-16by9">
+                  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/87Rztt8FeOU"></iframe>
                 </div>
               </div>
             </div>
           </div>
-
-          <div class="modal-footer">
-            <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
-          </div>
-
         </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
+        </div>
+
       </div>
     </div>
+  </div>
 
-    <!-- França -->
-    <div class="modal fade" id="ModalFranca" tabindex="1" role="dialog">
-      <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
+  <!-- França -->
+  <div class="modal fade" id="ModalFranca" tabindex="1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
 
-          <div class="modal-header">
-            <h5 class="modal-title">França</h5>
-            <button type="button" class="close" data-dismiss="modal">
-              <span>&times;</span>
-            </button>
-          </div>
+        <div class="modal-header">
+          <h5 class="modal-title">França</h5>
+          <button type="button" class="close" data-dismiss="modal">
+            <span>&times;</span>
+          </button>
+        </div>
 
-          <div class="modal-body">
-            <div class="container-fluid">
-              <div class="text-center mb-1">
-                <a href="https://www.youtube.com/user/Expedia/videos" target="_blank">Conheça outros lugares</a>
-              </div>
-              <div class="row">
-                <div class="col-6">
-                  <h5>Paris</h5>
-                  <div class="embed-responsive embed-responsive-16by9">
-                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/yMovTzySMLY"></iframe>
-                  </div>
+        <div class="modal-body">
+          <div class="container-fluid">
+            <div class="text-center mb-1">
+              <a href="https://www.youtube.com/user/Expedia/videos" target="_blank">Conheça outros lugares</a>
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <h5>Paris</h5>
+                <div class="embed-responsive embed-responsive-16by9">
+                  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/yMovTzySMLY"></iframe>
                 </div>
-                <div class="col-6">
-                  <h5>Lyon</h5>
-                  <div class="embed-responsive embed-responsive-16by9">
-                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/5mDwqkC-y7Y"></iframe>
-                  </div>
+              </div>
+              <div class="col-6">
+                <h5>Lyon</h5>
+                <div class="embed-responsive embed-responsive-16by9">
+                  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/5mDwqkC-y7Y"></iframe>
                 </div>
               </div>
             </div>
           </div>
-
-          <div class="modal-footer">
-            <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
-          </div>
-
         </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
+        </div>
+
       </div>
     </div>
+  </div>
 
-    <!-- Itália -->
-    <div class="modal fade" id="ModalItalia" tabindex="1" role="dialog">
-      <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
+  <!-- Itália -->
+  <div class="modal fade" id="ModalItalia" tabindex="1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
 
-          <div class="modal-header">
-            <h5 class="modal-title">Itália</h5>
-            <button type="button" class="close" data-dismiss="modal">
-              <span>&times;</span>
-            </button>
-          </div>
+        <div class="modal-header">
+          <h5 class="modal-title">Itália</h5>
+          <button type="button" class="close" data-dismiss="modal">
+            <span>&times;</span>
+          </button>
+        </div>
 
-          <div class="modal-body">
-            <div class="container-fluid">
-              <div class="text-center mb-1">
-                <a href="https://www.youtube.com/user/Expedia/videos" target="_blank">Conheça outros lugares</a>
-              </div>
-              <div class="row">
-                <div class="col-6">
-                  <h5>Roma</h5>
-                  <div class="embed-responsive embed-responsive-16by9">
-                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/cR7mEG3XR5A"></iframe>
-                  </div>
-                </div>
-                <div class="col-6">
-                  <h5>Florença</h5>
-                  <div class="embed-responsive embed-responsive-16by9">
-                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/r_si_Gx-MQk"></iframe>
-                  </div>
+        <div class="modal-body">
+          <div class="container-fluid">
+            <div class="text-center mb-1">
+              <a href="https://www.youtube.com/user/Expedia/videos" target="_blank">Conheça outros lugares</a>
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <h5>Roma</h5>
+                <div class="embed-responsive embed-responsive-16by9">
+                  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/cR7mEG3XR5A"></iframe>
                 </div>
               </div>
-              <div class="row my-3">
-                <div class="col-6">
-                  <h5>Milão</h5>
-                  <div class="embed-responsive embed-responsive-16by9">
-                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/t4LbpTbuTRc"></iframe>
-                  </div>
+              <div class="col-6">
+                <h5>Florença</h5>
+                <div class="embed-responsive embed-responsive-16by9">
+                  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/r_si_Gx-MQk"></iframe>
                 </div>
-                <div class="col-6">
-                  <h5>Turim</h5>
-                  <div class="embed-responsive embed-responsive-16by9">
-                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/8E84TEghm3c"></iframe>
-                  </div>
+              </div>
+            </div>
+            <div class="row my-3">
+              <div class="col-6">
+                <h5>Milão</h5>
+                <div class="embed-responsive embed-responsive-16by9">
+                  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/t4LbpTbuTRc"></iframe>
+                </div>
+              </div>
+              <div class="col-6">
+                <h5>Turim</h5>
+                <div class="embed-responsive embed-responsive-16by9">
+                  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/8E84TEghm3c"></iframe>
                 </div>
               </div>
             </div>
           </div>
-
-          <div class="modal-footer">
-            <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
-          </div>
-
         </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
+        </div>
+
       </div>
     </div>
+  </div>
 
-    <!-- Vaticano -->
-    <div class="modal fade" id="ModalVaticano" tabindex="1" role="dialog">
-      <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
+  <!-- Vaticano -->
+  <div class="modal fade" id="ModalVaticano" tabindex="1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
 
-          <div class="modal-header">
-            <h5 class="modal-title">Vaticano</h5>
-            <button type="button" class="close" data-dismiss="modal">
-              <span>&times;</span>
-            </button>
-          </div>
+        <div class="modal-header">
+          <h5 class="modal-title">Vaticano</h5>
+          <button type="button" class="close" data-dismiss="modal">
+            <span>&times;</span>
+          </button>
+        </div>
 
-          <div class="modal-body">
-            <div class="container-fluid">
-              <div class="text-center mb-1">
-                <a href="https://www.youtube.com/user/Expedia/videos" target="_blank">Conheça outros lugares</a>
-              </div>
-              <div class="row">
-                <div class="col-12">
-                  <h5>Vaticano</h5>
-                  <div class="embed-responsive embed-responsive-16by9">
-                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/lVxMHRiC3tc"></iframe>
-                  </div>
+        <div class="modal-body">
+          <div class="container-fluid">
+            <div class="text-center mb-1">
+              <a href="https://www.youtube.com/user/Expedia/videos" target="_blank">Conheça outros lugares</a>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <h5>Vaticano</h5>
+                <div class="embed-responsive embed-responsive-16by9">
+                  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/lVxMHRiC3tc"></iframe>
                 </div>
               </div>
             </div>
           </div>
-
-          <div class="modal-footer">
-            <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
-          </div>
-
         </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
+        </div>
+
       </div>
     </div>
+  </div>
 
-    <!-- Relógio -->
-    <footer>
-      <div id="datalocal"></div>
-    </footer>
+  <!-- Relógio -->
+  <footer>
+    <div id="datalocal"></div>
+  </footer>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" 
-      crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" 
-      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" 
-      crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" 
-      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" 
-      crossorigin="anonymous"></script>
-      <script type="text/javascript" src="main.js"></script>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script type="text/javascript" src="js/main.js"></script>
 
-  </body>
+</body>
 
 </html>
